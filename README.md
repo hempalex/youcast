@@ -70,9 +70,10 @@ server {
   # ....
   
 }
+```
 
 Then reload your webserver config (nginx -t && nginx -s reload) and open http://wwww.site.tld/podcasts in browser. 
 
 You should see a list of RSS files. 
 Copy url of one of then and use it to add to your favorite podcast catcher application. 
-I prefer Downcast and Overcast but RSS shoud be compatible to almost any.
+I prefer `Downcast` and `Overcast` for iOS but RSS shoud be compatible to almost any podcast app.
