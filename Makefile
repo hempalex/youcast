@@ -1,7 +1,7 @@
 BINARY=youcast
 SRC=youcast.go
 
-PLATFORMS=darwin freebsd
+PLATFORMS=darwin freebsd linux
 ARCHITECTURES=amd64 arm64
 
 all: build
