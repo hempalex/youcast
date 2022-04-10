@@ -36,19 +36,23 @@ Then create shell script to run youcast, for example /opt/bin/youcast.sh
 #!/bin/sh
 
 cd /var/www/podcasts
-/opt/bin/youcast https://www.youtube.com/channel/<channel id>/videos <channel keyword> <base url> <url to channel artwork image>
+/opt/bin/youcast https://www.youtube.com/channel/<channel id>/videos <channel keyword> <base url> <url to channel artwork>
 ```
 
-Where 
-<channel id> - youtube channel id (you could just click on "video" section of your favorite youtube channel and copy url)
-<channel keyword> - a filename for rss feed
-<base url> - a url pointing to podcasts directory, like http://www.site.tld/podcasts  
-<url to channel artwork> - you could copy a url channel image and paste it here
+Where:
+
+`<channel id>` - youtube channel id (you could just click on "video" section of your favorite youtube channel and copy url)
+
+`<channel keyword>` - a filename for rss feed
+
+`<base url>` - a url pointing to podcasts directory, like http://www.site.tld/podcasts  
+
+`<url to channel artwork>` - you could copy a url to channel image from youtube channel page and paste it here
 
 Don't forget **chnmod 0755 /opt/bin/youcast.sh** and run it for testing
 For more than one channel just add a call to youcast for each channel url
 
-Run it for test, in podcasts directory (/var/www/podcasts) you should see a  <channel_keyword>.rss file and a "audio" directory which holds m4a files.
+Run it and in podcasts directory (/var/www/podcasts) you should see a  `<channel_keyword>.rss` file and a `audio` directory which holds `m4a` files.
 
 Secondly make your web server config (example for nginx.conf)
  
